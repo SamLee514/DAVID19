@@ -5,9 +5,10 @@ canvas {
 }
 
 .plot-container {
-  height: 700px;
-  width: 1000px;
+  height: 600px;
+  width: 900px;
   margin: auto;
+  padding: 20px;
   background-color: #eeeeee;
   border-radius: 20px;
   border: 3px solid #888888;

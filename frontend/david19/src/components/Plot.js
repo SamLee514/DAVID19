@@ -25,24 +25,24 @@ class Plot extends React.Component {
     // obtain the data somehow
     const data = {
       // the labels would be days of the week
-      labels: ['January', 'February', 'March', 'April', 'May'],
+      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October'],
       datasets: [
         {
-          label: 'Rainfall',
+          label: 'new cases per month',
           fill: false,
-          lineTension: 0,
+          lineTension: 0, // value of lineTension changes how curvy the plot is. 0 for straight lines, default value 0.4
           backgroundColor: 'rgba(75,192,192,1)',
           borderColor: 'rgba(0,0,0,1)',
           borderWidth: 2,
           // data[i] is the y-value for x-value labels[i]
-          data: [65, 59, 80, 81, 56],
+          data: [65, 59, 80, 81, 56, 30, 35, 90, 84, 67],
         }
       ]
     };
 
     // get the data, set the state
     // mood_data[i] is the mood for x-value labels[i]
-    let mood_data = [1.0, 0.5, 0.0, 0.3, null];
+    let mood_data = [1.0, 0.5, 0.0, 0.3, .9, 0.7, 0.4, 0.3, .2, null];
 
     // boxes are defined for the day, i.e. the mood of the current day is not displayed
     // I assume mood_data.length = data.length, so make sure to pad mood_data with a dummy value for the most recent day (eg null above)
@@ -62,17 +62,19 @@ class Plot extends React.Component {
       }
     ));
 
+    Chart.defaults.global.defaultFontFamily = "'Roboto Mono', monospace";
+
     let plot = new Chart(myChartRef, {
       type: 'line',
       data: data,
       options: {
         title: {
           display: true,
-          text: 'Average Rainfall per month',
+          text: data.datasets[0].label, // currently taking title from datasets, but could get it another way
           fontSize: 20,
         },
         legend: {
-          display: true,
+          display: false,
           position: 'right'
         },
         annotation: {
