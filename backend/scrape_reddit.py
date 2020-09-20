@@ -49,6 +49,7 @@ for post in new_posts:
     # Load into db
     json_document = {
         'postNumber': post_num,
+        'postDate': post.created_utc,
         'postID': post.id,
         'postTitle': post.title,
         'postContent': post.selftext,
