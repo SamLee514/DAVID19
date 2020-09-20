@@ -30,7 +30,7 @@ class Plot extends React.Component {
         {
           label: 'Rainfall',
           fill: false,
-          lineTension: 0.5,
+          lineTension: 0,
           backgroundColor: 'rgba(75,192,192,1)',
           borderColor: 'rgba(0,0,0,1)',
           borderWidth: 2,
