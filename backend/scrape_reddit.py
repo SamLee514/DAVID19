@@ -27,9 +27,11 @@ reddit = praw.Reddit(client_id='uFDD9nuv5yHZJA',
 # Print Statements
 new_posts = reddit.subreddit('COVID').new(limit=10)
 post_num = 1
+
 for post in new_posts:
     print("Post Number: ", post_num, "\n")
     print("Post ID: ", post.id, "\n")
+    print("Post Date: ", post.created_utc, "\n")
     print("Post Title: ", post.title, "\n")
     print("Post Content: ", post.selftext, "\n")
     submission = reddit.submission(id=post.id)
