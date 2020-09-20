@@ -7,20 +7,23 @@
 
 body {
   font-family: 'Roboto Mono', monospace;
-}
-
-.App {
-  text-align: center;
+  background-color: #e5e5e5;
 }
 
 .App-container {
-  background-color: #e5e5e5;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: calc(10px + 2vmin);
+  /* font-size: calc(10px + 2vmin); */
   color: white;
+}
+
+.header {
+  background-color: #6B6B6B;
+  color: #e5e5e5;
+  padding: 10px 0 10px 20px;
+  font-size: 30px;
 }
 
 .sentiment-legend {
@@ -32,6 +35,7 @@ body {
 
 .sentiment-title {
   padding: 20px;
+  font-size: 25px;
 }
 
 .sentiment-color-container {

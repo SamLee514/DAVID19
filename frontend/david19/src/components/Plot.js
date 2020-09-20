@@ -63,15 +63,16 @@ class Plot extends React.Component {
     ));
 
     Chart.defaults.global.defaultFontFamily = "'Roboto Mono', monospace";
+    Chart.defaults.global.defaultFontSize = 16;
 
-    let plot = new Chart(myChartRef, {
+    new Chart(myChartRef, {
       type: 'line',
       data: data,
       options: {
         title: {
           display: true,
           text: data.datasets[0].label, // currently taking title from datasets, but could get it another way
-          fontSize: 20,
+          fontSize: 30,
         },
         legend: {
           display: false,

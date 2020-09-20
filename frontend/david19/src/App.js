@@ -5,7 +5,10 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div>
+      <div className="header">
+        DAVID-19
+      </div>
       <div className="App-container">
         <Plot />
         <div className="sentiment-legend" height='100px' width='50px'>
