@@ -1,0 +1,16 @@
+canvas {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.plot-container {
+  height: 600px;
+  width: 900px;
+  margin: auto;
+  padding: 20px;
+  background-color: #eeeeee;
+  border-radius: 20px;
+  border: 3px solid #888888;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
